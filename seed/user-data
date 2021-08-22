@@ -1,0 +1,11 @@
+#cloud-config
+password: passw0rd
+chpasswd: { expire: False }
+ssh_pwauth: True
+
+users:
+  - default
+  - name: foo
+    plain_text_passwd: bar
+    lock_passwd: False
+    shell: /bin/bash
